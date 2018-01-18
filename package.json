@@ -1,0 +1,28 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "some notes",
+  "main": "server.js",
+  "scripts": {
+    "start": "webpack -w & node ./server"
+  },
+  "author": "skogtake",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "express": "^4.15.4",
+    "material-ui": "^0.19.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.2.2",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.1"
+  }
+}
