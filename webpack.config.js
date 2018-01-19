@@ -4,7 +4,12 @@ module.exports = {
     entry: './src/client.js',
     output: {
         path: path.join(__dirname, '/public'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+    },
+    devtool: 'eval-source-map',
+    watchOptions: {
+        poll: true,
+        ignored: /node_modules/,
     },
     module: {
         rules: [
@@ -20,13 +25,13 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: [
-                    'css-loader',
                     'style-loader',
+                    'css-loader',
                 ],
             },
-        ]
+        ],
     },
     resolve: {
-        extensions: ['*', '.js', '.json']
-    }
+        extensions: ['*', '.js', '.json'],
+    },
 };
