@@ -1,99 +1,102 @@
 {
-    "extends": [
-        "airbnb",
-        "plugin:promise/recommended"
-    ],
-    "plugins": [
-        "react",
-        "promise",
-        "class-property"
-    ],
-    "rules": {
-        "indent": [2, 4],
-        "linebreak-style": [2, "windows"],
-        "no-undef": 1,
-        "arrow-parens": [2, "as-needed"],
-        "no-mixed-operators": 0,
-        "radix": [2, "as-needed"],
-        "no-nested-ternary": 0,
-        "no-bitwise": 0,
-        "no-plusplus": 0,
-        "no-restricted-syntax": 0,
-        "no-unused-vars": 1,
-        "no-use-before-define": 1,
-        "no-param-reassign": 1,
-        "import/prefer-default-export": 1,
-        "no-shadow": 1,
-        "brace-style": [2, "stroustrup"],
-        "indent": [2, 4, {
-            "SwitchCase": 1
-        }],
-        "max-len": 1,
-        "class-methods-use-this": 0,
-        "array-callback-return": 0,
-        "no-case-declarations": 0,
-        "consistent-return": 0,
-        "no-class-assign": 1,
-        "global-require": 1,
-        "import/first": 1,
-        "no-prototype-builtins": 1,
-        "import/no-named-default": 1,
-        "import/no-named-as-default": 1,
-        "no-debugger": 0,
-        "no-else-return": 0,
-        "no-loop-func": 1,
+	"extends": ["airbnb", "plugin:promise/recommended"],
+	"plugins": ["react", "promise", "class-property"],
+	"rules": {
+		"indent": [2, 4],
+		"linebreak-style": [2, "windows"],
+		"no-undef": 1,
+		"arrow-parens": [2, "as-needed"],
+		"no-mixed-operators": 0,
+		"radix": [2, "as-needed"],
+		"no-nested-ternary": 0,
+		"no-bitwise": 0,
+		"no-plusplus": 0,
+		"no-restricted-syntax": 0,
+		"no-unused-vars": 1,
+		"no-use-before-define": 1,
+		"no-param-reassign": 1,
+		"import/prefer-default-export": 1,
+		"no-shadow": 1,
+		"brace-style": [2, "stroustrup"],
+		"indent": [
+			2,
+			4,
+			{
+				"SwitchCase": 1
+			}
+		],
+		"max-len": 1,
+		"class-methods-use-this": 0,
+		"array-callback-return": 0,
+		"no-case-declarations": 0,
+		"consistent-return": 0,
+		"no-class-assign": 1,
+		"global-require": 1,
+		"import/first": 1,
+		"no-prototype-builtins": 1,
+		"import/no-named-default": 1,
+		"import/no-named-as-default": 1,
+		"no-debugger": 0,
+		"no-else-return": 0,
+		"no-loop-func": 1,
 
-        "class-property/class-property-semicolon": [2, "always"],
+		"class-property/class-property-semicolon": [2, "always"],
 
-        "promise/always-return": 1,
-        "promise/catch-or-return": 1,
+		"promise/always-return": 1,
+		"promise/catch-or-return": 1,
 
-        "react/jsx-filename-extension": [1, {
-            "extensions": [".js", ".jsx"]
-        }],
-        "react/prop-types": 1,
-        "react/jsx-indent": [2, 4],
-        "react/jsx-indent-props": [2, 4],
-        "react/no-set-state": 0,
-        "react/jsx-handler-names": 0,
-        "react/require-optimization": 0,
-        "react/prefer-stateless-function": 0,
-        "react/jsx-no-literals": 1,
-        "react/no-array-index-key": 0,
-        "react/require-default-props": 0,
-        "react/forbid-prop-types": 0,
-        "react/no-unused-prop-types": 1,
-        "react/jsx-curly-spacing": [2, {
-            "when": "always",
-            "children": true
-        }],
-        "react/sort-comp": 1,
-        "react/no-unused-state": 1,
-        "react/no-string-refs": 1,
-        "react/default-props-match-prop-types": 1,
-        "react/no-find-dom-node": 1,
-        "react/no-danger": 1,
-        "react/jsx-no-bind": 1,
-        "react/display-name": 1,
-        "react/sort-prop-types": 1,
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".js", ".jsx"]
+			}
+		],
+		"react/prop-types": 1,
+		"react/jsx-indent": [2, 4],
+		"react/jsx-indent-props": [2, 4],
+		"react/no-set-state": 0,
+		"react/jsx-handler-names": 0,
+		"react/require-optimization": 0,
+		"react/prefer-stateless-function": 0,
+		"react/jsx-no-literals": 1,
+		"react/no-array-index-key": 0,
+		"react/require-default-props": 0,
+		"react/forbid-prop-types": 0,
+		"react/no-unused-prop-types": 1,
+		"react/jsx-curly-spacing": [
+			2,
+			{
+				"when": "always",
+				"children": true
+			}
+		],
+		"react/sort-comp": 1,
+		"react/no-unused-state": 1,
+		"react/no-string-refs": 1,
+		"react/default-props-match-prop-types": 1,
+		"react/no-find-dom-node": 1,
+		"react/no-danger": 1,
+		"react/jsx-no-bind": 1,
+		"react/display-name": 1,
+		"react/sort-prop-types": 1,
 
-        "jsx-a11y/no-noninteractive-element-interactions": 0,
-        "jsx-a11y/no-static-element-interactions": 0,
-        "jsx-a11y/href-no-hash": 1,
-        "jsx-a11y/label-has-for": 1
-    },
-    "env": {
-        "browser": true,
-        "es6": true,
-        "node": true
-    },
-    "parser": "babel-eslint",
-    "parserOptions": {
-        "ecmaVersion": 7,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "impliedStrict": true,
-            "jsx": true
-        }
-    }
+		"jsx-a11y/no-noninteractive-element-interactions": 0,
+		"jsx-a11y/no-static-element-interactions": 0,
+		"jsx-a11y/href-no-hash": 1,
+		"jsx-a11y/label-has-for": 1
+	},
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true
+	},
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaVersion": 7,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"impliedStrict": true,
+			"jsx": true
+		}
+	}
 }

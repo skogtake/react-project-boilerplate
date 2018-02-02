@@ -1,9 +1,0 @@
-.paper {
-    width: 800px;
-    margin: 50px auto;
-    padding: 50px;
-}
-
-.form-group + .form-group {
-    margin: 20px 0 0 0;
-}
