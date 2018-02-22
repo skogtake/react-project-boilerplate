@@ -1,39 +1,48 @@
 {
-  "name": "react-project-boilerplate",
-  "version": "0.0.1",
-  "description": "boilerplate for ",
-  "main": "server.js",
-  "scripts": {
-    "start": "webpack -w & node ./server"
-  },
-  "author": "skogtake",
-  "license": "MIT",
-  "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.9",
-    "express": "^4.16.2",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
-    "style-loader": "^0.20.1",
-    "webpack": "^3.10.0"
-  },
-  "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.16.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-class-property": "^1.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-react": "^7.6.1",
-    "prettier": "^1.10.2",
-    "stylelint": "^8.4.0",
-    "stylelint-config-recommended": "^2.0.1"
-  }
+    "name": "react-project-boilerplate",
+    "version": "0.0.2",
+    "description": "boilerplate for ",
+    "main": "server.js",
+    "scripts": {
+        "start": "webpack --config webpack.prod.babel.js & node ./server",
+        "dev": "webpack-dev-server --config webpack.dev.babel.js",
+        "lint": "eslint --quiet client/ --ext .js",
+        "fix": "eslint --quiet client/ --ext .js --fix"
+    },
+    "author": "skogtake",
+    "license": "MIT",
+    "dependencies": {
+        "prop-types": "^15.6.0",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "react-redux": "^5.0.7",
+        "redux": "^3.7.2"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-eslint": "^8.2.2",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "css-loader": "^0.28.9",
+        "eslint": "^4.18.1",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-plugin-class-property": "^1.1.0",
+        "eslint-plugin-import": "^2.9.0",
+        "eslint-plugin-jsx-a11y": "^6.0.3",
+        "eslint-plugin-promise": "^3.6.0",
+        "eslint-plugin-react": "^7.7.0",
+        "file-loader": "^1.1.9",
+        "prettier": "^1.10.2",
+        "react-hot-loader": "^3.1.3",
+        "style-loader": "^0.20.2",
+        "stylelint": "^9.1.1",
+        "stylelint-config-recommended": "^2.1.0",
+        "uglifyjs-webpack-plugin": "^1.2.0",
+        "webpack": "^3.11.0",
+        "webpack-dev-server": "^2.11.1",
+        "webpack-merge": "^4.1.1"
+    }
 }
