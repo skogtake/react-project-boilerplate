@@ -25,7 +25,11 @@ const baseConfig = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                use: ['style-loader', 'css-loader'],
+                // use: ['style-loader', 'css-loader'],
+                loaders: [
+                    'style-loader?sourceMap',
+                    'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+                ],
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,

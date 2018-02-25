@@ -1,9 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import CSSModules from 'react-css-modules';
 
 import { onIncrement, onDecrement } from '../../actions/counterActionTypes';
 
+import styles from './Counter.css';
+
+// @CSSModules(styles)
 class Counter extends Component {
     constructor(props) {
         super(props);
@@ -25,28 +29,18 @@ class Counter extends Component {
         const { value, onIncrement, onDecrement } = this.props;
         return (
             <Fragment>
+                <p styleName="red">Clicked: { value } times</p>
+
                 <p>
-                    Clicked: { value } times
+                    <button onClick={ onIncrement }>+</button>
+
+                    <button onClick={ onDecrement }>-</button>
                 </p>
 
                 <p>
-                    <button onClick={ onIncrement }>
-                        +
-                    </button>
+                    <button onClick={ this.incrementIfOdd }>Increment if odd</button>
 
-                    <button onClick={ onDecrement }>
-                        -
-                    </button>
-                </p>
-
-                <p>
-                    <button onClick={ this.incrementIfOdd }>
-                        Increment if odd
-                    </button>
-
-                    <button onClick={ this.incrementAsync }>
-                        Increment async
-                    </button>
+                    <button onClick={ this.incrementAsync }>Increment async</button>
                 </p>
             </Fragment>
         );
@@ -59,10 +53,7 @@ Counter.propTypes = {
     onDecrement: PropTypes.func.isRequired,
 };
 
-export default connect(
-    state => ({ value: state.counter }),
-    {
-        onIncrement,
-        onDecrement,
-    },
-)(Counter);
+export default connect(state => ({ value: state.counter }), {
+    onIncrement,
+    onDecrement,
+})(CSSModules(Counter, styles));
