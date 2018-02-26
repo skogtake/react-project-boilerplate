@@ -7,8 +7,14 @@ import { onIncrement, onDecrement } from '../../actions/counterActionTypes';
 
 import styles from './Counter.css';
 
-// @CSSModules(styles)
+@CSSModules(styles, { allowMultiple: true })
 class Counter extends Component {
+    static propTypes = {
+        value: PropTypes.number.isRequired,
+        onIncrement: PropTypes.func.isRequired,
+        onDecrement: PropTypes.func.isRequired,
+    };
+
     constructor(props) {
         super(props);
         this.incrementAsync = this.incrementAsync.bind(this);
@@ -49,13 +55,7 @@ class Counter extends Component {
     }
 }
 
-Counter.propTypes = {
-    value: PropTypes.number.isRequired,
-    onIncrement: PropTypes.func.isRequired,
-    onDecrement: PropTypes.func.isRequired,
-};
-
 export default connect(state => ({ value: state.counter }), {
     onIncrement,
     onDecrement,
-})(CSSModules(Counter, styles));
+})(Counter);
