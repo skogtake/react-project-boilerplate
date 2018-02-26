@@ -1,11 +1,11 @@
 {
     "name": "react-project-boilerplate",
-    "version": "0.0.2",
-    "description": "boilerplate for ",
+    "version": "0.0.3",
+    "description": "boilerplate for react projects",
     "main": "server.js",
     "scripts": {
-        "start": "webpack --config webpack.prod.babel.js & node ./server",
-        "dev": "webpack-dev-server --config webpack.dev.babel.js",
+        "start": "webpack --mode production --config webpack.prod.babel.js & node ./server",
+        "dev": "webpack-dev-server --mode development --config webpack.dev.babel.js",
         "lint": "eslint --quiet client/ --ext .js",
         "fix": "eslint --quiet client/ --ext .js --fix"
     },
@@ -43,8 +43,9 @@
         "stylelint": "^9.1.1",
         "stylelint-config-recommended": "^2.1.0",
         "uglifyjs-webpack-plugin": "^1.2.0",
-        "webpack": "^3.11.0",
-        "webpack-dev-server": "^2.11.1",
+        "webpack": "^4.0.0",
+        "webpack-cli": "^2.0.9",
+        "webpack-dev-server": "^3.0.0",
         "webpack-merge": "^4.1.1"
     }
 }

@@ -29,7 +29,9 @@ class Counter extends Component {
         const { value, onIncrement, onDecrement } = this.props;
         return (
             <Fragment>
-                <p styleName="red">Clicked: { value } times</p>
+                <p styleName="red">
+                    Clicked: { value } times
+                </p>
 
                 <p>
                     <button onClick={ onIncrement }>+</button>

@@ -16,6 +16,7 @@ const prodConfig = merge.strategy(strategy)(baseConfig, {
                 warnings: false,
             },
             extractComments: true,
+            sourceMap: true,
         }),
     ],
 });
