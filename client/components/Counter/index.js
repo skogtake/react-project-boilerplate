@@ -5,7 +5,7 @@ import CSSModules from 'react-css-modules';
 
 import { onIncrement, onDecrement } from '../../actions/counterActionTypes';
 
-import styles from './Counter.css';
+import styles from './styles.css';
 
 @CSSModules(styles, { allowMultiple: true })
 class Counter extends Component {
