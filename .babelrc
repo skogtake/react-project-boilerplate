@@ -1,8 +1,35 @@
 {
-    "presets": ["env", "react"],
     "plugins": [
-		"transform-class-properties",
-		"transform-decorators-legacy",
-		"transform-object-rest-spread"
-	]
+        ["transform-class-properties", {
+            "useBuiltIns": true
+        }],
+        ["transform-decorators-legacy", {
+            "useBuiltIns": true
+        }],
+        ["transform-object-rest-spread", {
+            "useBuiltIns": true
+        }],
+        ["transform-runtime", {
+            "helpers": true,
+            "polyfill": false,
+            "regenerator": false,
+            "moduleName": "babel-runtime"
+        }]
+    ],
+    "presets": [
+        ["env", {    
+            "loose": true,
+            "useBuiltIns": true,
+            "targets": {
+                "browsers": [
+                    "IE > 10",
+                    "Chrome > 54",
+                    "Safari > 9",
+                    "Firefox > 50",
+                    "last 2 versions"
+                ]
+            }
+        }],
+        "react"
+    ]
 }

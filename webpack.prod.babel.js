@@ -14,9 +14,11 @@ const prodConfig = merge.strategy(strategy)(baseConfig, {
             uglifyOptions: {
                 ecma: 8,
                 warnings: false,
+                compress: true,
+                mangle: true,
+                toplevel: true,
             },
             extractComments: true,
-            sourceMap: true,
         }),
     ],
 });

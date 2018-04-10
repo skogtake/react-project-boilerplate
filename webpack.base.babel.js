@@ -7,7 +7,6 @@ const baseConfig = {
         path: path.join(__dirname, '/public'),
         filename: 'bundle.js',
     },
-    devtool: 'eval-source-map',
     watchOptions: {
         poll: true,
         ignored: /node_modules/,
@@ -15,17 +14,9 @@ const baseConfig = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
-                query: {
-                    presets: ['env', 'react'],
-                    plugins: [
-                        'transform-class-properties',
-                        'transform-decorators-legacy',
-                        'transform-object-rest-spread',
-                    ],
-                },
             },
             {
                 test: /\.css$/,

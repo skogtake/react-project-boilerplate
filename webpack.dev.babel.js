@@ -15,7 +15,6 @@ const devConfig = merge.strategy(strategy)(baseConfig, {
     devServer: {
         hot: true,
         contentBase: path.join(__dirname, '/public'),
-        open: true,
     },
 });
 
