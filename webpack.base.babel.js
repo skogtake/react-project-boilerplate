@@ -27,7 +27,7 @@ const baseConfig = {
                 ],
             },
             {
-                test: /\.(png|svg|jpg|gif)$/,
+                test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
                 loader: 'file-loader',
             },
         ],
