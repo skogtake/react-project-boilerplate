@@ -2,12 +2,12 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import CSSModules from 'react-css-modules';
+import { pipe } from 'lodash/fp';
 
 import { onIncrement, onDecrement } from '../../actions/counterActionTypes';
 
 import styles from './styles.css';
 
-@CSSModules(styles, { allowMultiple: true })
 class Counter extends Component {
   static propTypes = {
       value: PropTypes.number.isRequired,
@@ -55,7 +55,10 @@ class Counter extends Component {
   }
 }
 
-export default connect(state => ({ value: state.counter }), {
+const applyStyles = CSSModules(styles, { allowMultiple: true });
+const applyConnect = connect(state => ({ value: state.counter }), {
     onIncrement,
     onDecrement,
-})(Counter);
+});
+
+export default pipe(applyStyles, applyConnect)(Counter);

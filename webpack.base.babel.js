@@ -4,8 +4,8 @@ const baseConfig = {
     context: path.resolve(__dirname, 'client'),
     entry: ['./index.js'],
     output: {
-        path: path.join(__dirname, '/public'),
-        filename: 'bundle.js',
+        path: path.join(__dirname, 'public'),
+        filename: './bundle.js',
     },
     watchOptions: {
         poll: true,

@@ -3,9 +3,6 @@
         ["transform-class-properties", {
             "useBuiltIns": true
         }],
-        ["transform-decorators-legacy", {
-            "useBuiltIns": true
-        }],
         ["transform-object-rest-spread", {
             "useBuiltIns": true
         }],
@@ -31,5 +28,14 @@
             }
         }],
         "react"
-    ]
+    ],
+    "env": {
+        "production": {
+            "plugins": [
+                "transform-react-remove-prop-types",
+                "transform-react-inline-elements",
+                "transform-react-constant-elements"
+            ]
+        }    
+    }
 }

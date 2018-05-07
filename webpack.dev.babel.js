@@ -14,7 +14,7 @@ const devConfig = merge.strategy(strategy)(baseConfig, {
     plugins: [new webpack.HotModuleReplacementPlugin()],
     devServer: {
         hot: true,
-        contentBase: path.join(__dirname, '/public'),
+        contentBase: path.join(__dirname, 'public'),
     },
 });
 
