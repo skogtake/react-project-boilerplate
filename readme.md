@@ -32,3 +32,6 @@ Used technology stack:
 
 * add testing with Jest and Enzym
 * add Prepack for run optimizations
+* add React-router
+* add Autoprefixer
+* compare with create-react-app
