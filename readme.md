@@ -34,4 +34,7 @@ Used technology stack:
 * add Prepack for run optimizations
 * add React-router
 * add Autoprefixer
-* compare with create-react-app
+* move from linters to Prettier
+* make a branch with TypeScript
+* add manifest.json for support of Progressive Web Apps
+* make comparison with create-react-app
