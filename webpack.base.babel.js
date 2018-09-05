@@ -1,7 +1,7 @@
 import path from 'path';
 
 const baseConfig = {
-    context: path.resolve(__dirname, 'client'),
+    context: path.resolve(__dirname, 'src/client'),
     entry: ['babel-polyfill', './index.js'],
     output: {
         path: path.join(__dirname, 'public'),
