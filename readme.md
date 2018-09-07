@@ -16,25 +16,22 @@ Used technology stack:
 
 5. Babel
 
-6. ESLint
+6. Prettier
 
-7. Stylelint
+7. Jest + Enzyme
 
 ## Run scripts
 
 * `npm start` - runs Webpack in production mode and launches Express app
 * `npm run dev` - runs Webpack dev server in dev mode
 * `npm run build` - runs Webpack to make build in /public directory
-* `npm run lint` - runs ESLint to get errors/warnings
-* `npm run fix` - runs ESLint to fix errors/warnings if any
+* `npm run format` - runs Prettier to format source
+* `npm run test` - runs ESLint to fix errors/warnings if any
 
 ## TODO's
 
-* add testing with Jest and Enzym
-* add Prepack for run optimizations
 * add React-router
 * add Autoprefixer
-* move from linters to Prettier
 * make a branch with TypeScript
 * add manifest.json for support of Progressive Web Apps
 * make comparison with create-react-app
