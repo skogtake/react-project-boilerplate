@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="manifest" href="/manifest.json">
-        <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-        
-        <title>React project boilerplate</title>
-    </head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="theme-color" content="#ffffff">
 
-    <body>
-        <div id="root"></div>
-        <script src="bundle.js"></script>
-    </body>
+	<link rel="icon" href="./favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+	<title>React project boilerplate</title>
+
+	<script>
+		// if ('serviceWorker' in navigator) {
+		// 	// Use the window load event to keep the page load performant
+		// 	window.addEventListener('load', () => {
+		// 		navigator.serviceWorker.register('sw.js');
+		// 	});
+		// }
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/sw.js').then(registration => {
+					console.log('SW registered: ', registration);
+				}).catch(registrationError => {
+					console.log('SW registration failed: ', registrationError);
+				});
+			});
+		}
+	</script>
+</head>
+
+<body>
+	<div id="root">
+		JavaScript is disabled :(
+	</div>
+	<script src="bundle.js"></script>
+</body>
+
 </html>

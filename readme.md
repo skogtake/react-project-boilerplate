@@ -20,6 +20,8 @@ Used technology stack:
 
 7. Jest + Enzyme
 
+8. Service worker and manifest.json to support Progressive Web Apps requirements
+
 ## Run scripts
 
 * `npm start` - runs Webpack in production mode and launches Express app
@@ -33,5 +35,3 @@ Used technology stack:
 * add React-router
 * add Autoprefixer
 * make a branch with TypeScript
-* add manifest.json for support of Progressive Web Apps
-* make comparison with create-react-app

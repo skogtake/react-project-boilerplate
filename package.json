@@ -15,6 +15,10 @@
 		"test:coverage": "jest --coverage",
 		"test:update": "jest --updateSnapshot"
 	},
+	"pre-commit": [
+		"format",
+		"test"
+	],
 	"author": "skogtake",
 	"license": "MIT",
 	"dependencies": {
@@ -28,7 +32,7 @@
 	},
 	"devDependencies": {
 		"babel-core": "6.26.3",
-		"babel-jest": "23.4.2",
+		"babel-jest": "23.6.0",
 		"babel-loader": "7.1.5",
 		"babel-plugin-transform-class-properties": "6.24.1",
 		"babel-plugin-transform-object-rest-spread": "6.26.0",
@@ -46,8 +50,9 @@
 		"enzyme-to-json": "3.3.4",
 		"extract-text-webpack-plugin": "3.0.2",
 		"file-loader": "2.0.0",
-		"jest": "23.5.0",
+		"jest": "23.6.0",
 		"jest-transform-stub": "1.0.0",
+		"pre-commit": "1.2.2",
 		"prettier": "1.14.2",
 		"react-hot-loader": "4.3.6",
 		"redux-devtools-extension": "2.13.5",
@@ -56,6 +61,7 @@
 		"webpack": "4.17.2",
 		"webpack-cli": "3.1.0",
 		"webpack-dev-server": "3.1.8",
-		"webpack-merge": "4.1.4"
+		"webpack-merge": "4.1.4",
+		"workbox-webpack-plugin": "^3.4.1"
 	}
 }

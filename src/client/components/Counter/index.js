@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import CSSModules from 'react-css-modules';
-import { pipe } from 'lodash/fp';
+import { compose } from 'lodash/fp';
 
 import { onIncrement, onDecrement } from '../../actions/counterActionTypes';
 
@@ -62,7 +62,7 @@ const applyConnect = connect(
 	},
 );
 
-export default pipe(
-	applyStyles,
+export default compose(
 	applyConnect,
+	applyStyles,
 )(Counter);

@@ -1,41 +1,47 @@
 {
-    "plugins": [
-        ["transform-class-properties", {
-            "useBuiltIns": true
-        }],
-        ["transform-object-rest-spread", {
-            "useBuiltIns": true
-        }],
-        ["transform-runtime", {
-            "helpers": true,
-            "polyfill": false,
-            "regenerator": false,
-            "moduleName": "babel-runtime"
-        }]
-    ],
-    "presets": [
-        ["env", {    
-            "loose": true,
-            "useBuiltIns": true,
-            "targets": {
-                "browsers": [
-                    "IE > 10",
-                    "Chrome > 54",
-                    "Safari > 9",
-                    "Firefox > 50",
-                    "last 2 versions"
-                ]
-            }
-        }],
-        "react"
-    ],
-    "env": {
-        "production": {
-            "plugins": [
-                "transform-react-remove-prop-types",
-                "transform-react-inline-elements",
-                "transform-react-constant-elements"
-            ]
-        }    
-    }
+	"plugins": [
+		[
+			"transform-class-properties",
+			{
+				"useBuiltIns": true
+			}
+		],
+		[
+			"transform-object-rest-spread",
+			{
+				"useBuiltIns": true
+			}
+		],
+		[
+			"transform-runtime",
+			{
+				"helpers": true,
+				"polyfill": false,
+				"regenerator": false,
+				"moduleName": "babel-runtime"
+			}
+		]
+	],
+	"presets": [
+		[
+			"env",
+			{
+				"loose": true,
+				"useBuiltIns": true,
+				"targets": {
+					"browsers": ["IE > 10", "Chrome > 54", "Safari > 9", "Firefox > 50", "last 2 versions"]
+				}
+			}
+		],
+		"react"
+	],
+	"env": {
+		"production": {
+			"plugins": [
+				"transform-react-remove-prop-types",
+				"transform-react-inline-elements",
+				"transform-react-constant-elements"
+			]
+		}
+	}
 }
