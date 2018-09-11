@@ -20,7 +20,8 @@
 				"regenerator": false,
 				"moduleName": "babel-runtime"
 			}
-		]
+		],
+		"syntax-dynamic-import"
 	],
 	"presets": [
 		[
@@ -29,7 +30,7 @@
 				"loose": true,
 				"useBuiltIns": true,
 				"targets": {
-					"browsers": ["IE > 10", "Chrome > 54", "Safari > 9", "Firefox > 50", "last 2 versions"]
+					"browsers": ["last 2 versions"]
 				}
 			}
 		],
