@@ -12,16 +12,16 @@ class App extends Component {
 		return (
 			<Fragment>
 				<div>
-					<Link to='/'>Home</Link>
+					<Link to="/">Home</Link>
 				</div>
 
 				<div>
-					<Link to='/counter'>Counter</Link>
+					<Link to="/counter">Counter</Link>
 				</div>
 
 				<Switch>
-					<Route exact path="/" component={ Home }/>
-					<Route exact path="/counter" component={ Counter }/>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/counter" component={Counter} />
 				</Switch>
 			</Fragment>
 		);
