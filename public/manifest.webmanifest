@@ -3,12 +3,17 @@
 	"short_name": "pwa sample",
 	"icons": [
 		{
-			"src": "icon.png",
-			"sizes": "256x256",
+			"src": "128x128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "512x512.png",
+			"sizes": "512x512",
 			"type": "image/png"
 		}
 	],
-	"start_url": "/",
+	"start_url": ".",
 	"background_color": "#ffffff",
 	"display": "standalone",
 	"orientation": "landscape",
