@@ -1,5 +1,4 @@
 import path from 'path';
-import WorkboxPlugin from 'workbox-webpack-plugin';
 
 const baseConfig = {
 	context: path.resolve(__dirname, 'src/client'),
@@ -36,13 +35,6 @@ const baseConfig = {
 	resolve: {
 		extensions: ['*', '.js', '.json'],
 	},
-	plugins: [
-		new WorkboxPlugin.GenerateSW({
-			swDest: 'sw.js',
-			clientsClaim: true,
-			skipWaiting: true,
-		}),
-	],
 };
 
 export default baseConfig;

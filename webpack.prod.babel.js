@@ -1,4 +1,5 @@
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
+import OfflinePlugin from 'offline-plugin';
 import merge from 'webpack-merge';
 
 import baseConfig from './webpack.base.babel';
@@ -19,6 +20,24 @@ const prodConfig = merge.strategy(strategy)(baseConfig, {
 				toplevel: true,
 			},
 			extractComments: true,
+		}),
+		new OfflinePlugin({
+			caches: {
+				main: ['bundle.js', 'index.html'],
+				additional: [':externals:'],
+				optional: [':rest:'],
+			},
+			ServiceWorker: {
+				events: true,
+				navigateFallbackURL: '/',
+			},
+
+			AppCache: {
+				events: true,
+				FALLBACK: {
+					'/': '/index.html',
+				},
+			},
 		}),
 	],
 });
